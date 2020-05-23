@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.FXMLDocumentController">
+   <content>
+      <AnchorPane id="AnchorPane" fx:id="loginPane" style="-fx-background-color: #006A80;">
+         <children>
+            <ImageView fitHeight="568.0" fitWidth="1018.0" pickOnBounds="true">
+               <image>
+                  <Image url="@image/BG_HERE.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="604.0" layoutY="50.0" prefHeight="485.0" prefWidth="392.0" style="-fx-background-color: #fff;">
+               <children>
+                  <JFXTextField fx:id="username" labelFloat="true" layoutX="54.0" layoutY="173.0" prefHeight="29.0" prefWidth="302.0" promptText="Username" unFocusColor="#1b0101">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="login" defaultButton="true" layoutX="54.0" layoutY="357.0" onAction="#validateLogin" opacity="0.82" prefHeight="40.0" prefWidth="302.0" ripplerFill="#f8efef" style="-fx-background-color: #005696;" text="LOGIN" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fitHeight="107.0" fitWidth="100.0" layoutX="161.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/login_lock.png" />
+                     </image>
+                  </ImageView>
+                  <JFXPasswordField fx:id="password" labelFloat="true" layoutX="54.0" layoutY="271.0" prefHeight="29.0" prefWidth="302.0" promptText="Password" unFocusColor="#1b0101">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXComboBox fx:id="language" layoutX="300.0" layoutY="106.0" opacity="0.74" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <JFXButton fx:id="new_user" layoutX="21.0" layoutY="399.0" onAction="#newUser" prefHeight="40.0" prefWidth="274.0" ripplerFill="#b51717" style="-fx-background-color: #7faacb;" text="New User Registration" textFill="#fcfafa">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+            <Label fx:id="l_note" layoutX="3.0" layoutY="337.0" prefHeight="52.0" prefWidth="601.0" text="Click on the New User Registration button to setup a new profile" textFill="#f5f5f5" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" layoutX="965.0" layoutY="34.0" onMouseClicked="#closePage" size="40">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

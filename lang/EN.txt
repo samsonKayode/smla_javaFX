@@ -1,0 +1,41 @@
+username # Username
+password # Password
+l_note # Click on the New Registration button to setup a new profile
+login_register_Button # New User Registration
+lgin # Login
+forgot_pword # Forgot Password
+
+##New Profile Reg..
+
+newprofiletitle # New User Profile
+firstname # Firstname
+lastname # Lastname
+dob # Date of Birth
+sex # Sex
+atype # Account Type
+student_type # Student Type
+register # Register
+cancel # Cancel
+browse # Browse
+
+
+##Dialog Boxes..
+
+invalid_login # Invalid Login Details
+dberror # ErrorMsg
+info # Information
+exit_application # Are you sure you want to exit?
+db_selectLanguage # Please select default language
+database_err # Database error, contact admin
+user_exist # User profile already exist
+fill_in_blank # Fill in the blank fields
+user_created # New Profile Created
+user_updated # User Profile Updated
+
+##EDIT USER PROFILE..
+
+editprofiletitle # Edit User Profile
+update # Update
+STYPEERROR # Invalid Student Type Selected
+
+GOINNOW # LOG IN

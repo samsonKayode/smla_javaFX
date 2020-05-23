@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.NonFormalOptionController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="663.0" prefWidth="1280.0">
+         <children>
+            <AnchorPane prefHeight="96.0" prefWidth="1280.0" style="-fx-background-color: #434A54;">
+               <children>
+                  <Label fx:id="less_title" layoutX="29.0" layoutY="19.0" prefHeight="47.0" prefWidth="713.0" text="NON FORMAL LESSONS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BRIEFCASE" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <FontAwesomeIconView fx:id="bck" fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="1201.0" layoutY="65.0" onMouseClicked="#back" size="50">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="96.0" prefHeight="251.0" prefWidth="289.0" style="-fx-background-color: #7faacc;">
+               <children>
+                  <Line endX="50.0" layoutX="7.0" layoutY="102.0" startX="-5.0" stroke="WHITE" strokeWidth="5.0" />
+                  <Line endX="50.0" layoutX="186.0" layoutY="102.0" startX="100.0" stroke="WHITE" strokeWidth="5.0" />
+                  <Label fx:id="student_name" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="170.0" prefHeight="31.0" prefWidth="289.0" text="Student Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="student_image" fitHeight="160.0" fitWidth="176.0" layoutX="58.0" layoutY="10.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@image/photo.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="student_status" alignment="CENTER" layoutX="-5.0" layoutY="201.0" prefHeight="25.0" prefWidth="289.0" text="Status" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="251.0" fitWidth="991.0" layoutX="289.0" layoutY="96.0" pickOnBounds="true">
+               <image>
+                  <Image url="@image/header.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="b_literacy" buttonType="RAISED" contentDisplay="TOP" layoutX="52.0" layoutY="444.0" onAction="#literacy" onMouseEntered="#rollin1" onMouseExited="#rollout1" prefHeight="160.0" prefWidth="339.0" ripplerFill="#e81d1d" style="-fx-background-color: #7faacc;" text="LITERACY" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="73.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/english-receptionist.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="b_numeracy" buttonType="RAISED" contentDisplay="TOP" layoutX="466.0" layoutY="444.0" onAction="#numeracy" onMouseEntered="#rollin2" onMouseExited="#rollout2" prefHeight="160.0" prefWidth="339.0" ripplerFill="#e81d1d" style="-fx-background-color: #1f5b7f;" text="NUMERACY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="73.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/calculator.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="b_lifeskill" buttonType="RAISED" contentDisplay="TOP" layoutX="885.0" layoutY="443.0" onAction="#lifeskill" onMouseEntered="#rollin3" onMouseExited="#rollout3" prefHeight="160.0" prefWidth="339.0" ripplerFill="#e81d1d" style="-fx-background-color: #75a24d;" text="LIFE SKILLS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="73.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/monitor.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <AnchorPane layoutY="644.0" opacity="0.82" prefHeight="15.0" prefWidth="1280.0" style="-fx-background-color: #005696;" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.NonFormalVideoController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="721.0" prefWidth="996.0">
+         <children>
+            <AnchorPane prefHeight="50.0" prefWidth="990.0" style="-fx-background-color: #434A54;">
+               <children>
+                  <Label fx:id="title" layoutX="17.0" layoutY="5.0" prefHeight="45.0" prefWidth="979.0" text="Title" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="FILM" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <FontAwesomeIconView fx:id="bck" fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="941.0" layoutY="38.0" onMouseClicked="#close" size="40">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="4.0" layoutY="56.0" prefHeight="600.0" prefWidth="988.0" style="-fx-background-color: #FFF;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <MediaView fx:id="myVideo" fitHeight="600.0" fitWidth="985.0" layoutX="3.0" layoutY="4.0" />
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" layoutX="4.0" layoutY="667.0" prefHeight="50.0" prefWidth="990.0" style="-fx-background-color: #cccccc;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <JFXButton fx:id="play_button" buttonType="RAISED" onAction="#play" style="-fx-background-color: #000;" text="PLAY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLAY" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="pause_button" buttonType="RAISED" layoutX="244.0" layoutY="13.0" onAction="#pause" style="-fx-background-color: #000;" text="PAUSE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PAUSE" size="20" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

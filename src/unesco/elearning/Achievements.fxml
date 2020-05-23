@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.AchievementsController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="856.0" prefWidth="1280.0">
+         <children>
+            <AnchorPane prefHeight="37.0" prefWidth="1280.0" style="-fx-background-color: #434A54;">
+               <children>
+                  <Label fx:id="lesson_name" layoutX="29.0" layoutY="10.0" prefHeight="47.0" prefWidth="713.0" text="ACHIEVEMENTS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TROPHY" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <FontAwesomeIconView fx:id="bck" fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="1201.0" layoutY="56.0" onMouseClicked="#back" size="50">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="68.0" prefHeight="194.0" prefWidth="289.0" style="-fx-background-color: #7faacc;">
+               <children>
+                  <Line endX="50.0" layoutX="7.0" layoutY="102.0" startX="-5.0" stroke="WHITE" strokeWidth="5.0" />
+                  <Line endX="50.0" layoutX="186.0" layoutY="102.0" startX="100.0" stroke="WHITE" strokeWidth="5.0" />
+                  <Label fx:id="student_name" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="170.0" prefHeight="31.0" prefWidth="289.0" text="Student Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="student_image" fitHeight="160.0" fitWidth="176.0" layoutX="58.0" layoutY="10.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@image/photo.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="student_status" alignment="CENTER" layoutX="-5.0" layoutY="201.0" prefHeight="25.0" prefWidth="289.0" text="Status" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="7.0" layoutY="328.0" prefHeight="520.0" prefWidth="624.0" style="-fx-background-color: #1F5B7F;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label fx:id="LAL" alignment="CENTER" layoutY="1.0" prefHeight="31.0" prefWidth="624.0" style="-fx-background-color: #fff;" text="LEARNERS ACCESSED LESSONS">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="BOOK" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <TableView fx:id="lessonTable" layoutX="4.0" layoutY="60.0" prefHeight="324.0" prefWidth="616.0" tableMenuButtonVisible="true">
+                    <columns>
+                      <TableColumn fx:id="ldate" prefWidth="95.0" text="DATE" />
+                      <TableColumn fx:id="lcourse" prefWidth="112.0" text="COURSE" />
+                        <TableColumn fx:id="lterm" prefWidth="81.0" text="TERM" />
+                        <TableColumn fx:id="llesson" prefWidth="235.0" text="LESSON" />
+                        <TableColumn fx:id="lduration" prefWidth="92.0" text="DURATION" />
+                    </columns>
+                  </TableView>
+                  <AnchorPane layoutX="14.0" layoutY="395.0" prefHeight="111.0" prefWidth="277.0" style="-fx-background-color: #FF5363;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Label fx:id="a_lesson" alignment="CENTER" contentDisplay="TOP" prefHeight="55.0" prefWidth="277.0" text="ACCESSED LESSONS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="30" />
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="accessed" alignment="CENTER_RIGHT" layoutY="61.0" prefHeight="45.0" prefWidth="258.0" text="300 " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="333.0" layoutY="395.0" prefHeight="111.0" prefWidth="277.0" style="-fx-background-color: #cc3300;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Label fx:id="i_lesson" alignment="CENTER" contentDisplay="TOP" prefHeight="55.0" prefWidth="277.0" text="INCOMPLETE STUDY" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="30" />
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="incomplete" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="66.0" prefHeight="45.0" prefWidth="258.0" text="300 " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="649.0" layoutY="328.0" prefHeight="520.0" prefWidth="624.0" style="-fx-background-color: #077655;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label fx:id="LAQ" alignment="CENTER" prefHeight="31.0" prefWidth="624.0" style="-fx-background-color: #fff;" text="LEARNERS COMPLETED QUIZZES">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CUBES" size="30" />
+                     </graphic>
+                  </Label>
+                  <TableView fx:id="quizTable" layoutX="4.0" layoutY="59.0" prefHeight="324.0" prefWidth="616.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="qdate" prefWidth="97.0" text="DATE" />
+                        <TableColumn fx:id="qcourse" prefWidth="114.0" text="COURSE" />
+                        <TableColumn fx:id="qterm" prefWidth="83.0" text="TERM" />
+                        <TableColumn fx:id="qlesson" prefWidth="186.0" text="LESSON" />
+                        <TableColumn fx:id="qscore" prefWidth="64.0" text="SCORE" />
+                        <TableColumn fx:id="qstatus" prefWidth="71.0" text="STATUS" />
+                     </columns>
+                  </TableView>
+                  <AnchorPane layoutX="2.0" layoutY="395.0" prefHeight="111.0" prefWidth="193.0" style="-fx-background-color: #663333;">
+                     <children>
+                        <Label fx:id="i_attempt" alignment="CENTER" contentDisplay="TOP" layoutX="1.0" prefHeight="5.0" prefWidth="193.0" text="ATTEMPTS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="HASHTAG" size="30" />
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="attempts" alignment="CENTER_RIGHT" layoutX="1.0" layoutY="62.0" prefHeight="45.0" prefWidth="171.0" text="300 " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="216.0" layoutY="395.0" prefHeight="111.0" prefWidth="193.0" style="-fx-background-color: #FF5363;">
+                     <children>
+                        <Label fx:id="passes" alignment="CENTER" contentDisplay="TOP" layoutX="1.0" prefHeight="18.0" prefWidth="193.0" text="PASSES" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="30" />
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="passed" alignment="CENTER_RIGHT" layoutX="1.0" layoutY="62.0" prefHeight="45.0" prefWidth="171.0" text="300 " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="419.0" layoutY="395.0" prefHeight="111.0" prefWidth="193.0" style="-fx-background-color: #ff0000;">
+                     <children>
+                        <Label fx:id="fails" alignment="CENTER" contentDisplay="TOP" layoutX="1.0" layoutY="1.0" prefHeight="51.0" prefWidth="193.0" text="FAILS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="30" />
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="failed" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="62.0" prefHeight="45.0" prefWidth="171.0" text="300 " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="313.0" layoutY="103.0" prefHeight="156.0" prefWidth="289.0" style="-fx-background-color: #75A24D;">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BRIEFCASE" layoutX="10.0" layoutY="87.0" size="50">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </FontAwesomeIconView>
+                  <Label fx:id="lc1" layoutX="71.0" layoutY="29.0" prefHeight="36.0" prefWidth="160.0" text="LESSONS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="lc2" layoutX="71.0" layoutY="65.0" text="COMPLETED" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="lessonsCompleted" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="113.0" prefHeight="36.0" prefWidth="277.0" text="300" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="639.0" layoutY="103.0" prefHeight="156.0" prefWidth="289.0" style="-fx-background-color: #FD6D4B;">
+               <children>
+                  <Label fx:id="a_quiz" layoutX="14.0" layoutY="62.0" text="AVAILABLE QUIZZES- " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="availableQuiz" layoutX="232.0" layoutY="60.0" text="300" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="c_quiz" layoutX="14.0" layoutY="108.0" text="COMPLETED QUIZ   - " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="completedQuiz" layoutX="232.0" layoutY="106.0" text="300" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CUBES" layoutX="112.0" layoutY="51.0" size="50">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </FontAwesomeIconView>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="967.0" layoutY="103.0" prefHeight="156.0" prefWidth="289.0" style="-fx-background-color: #7faacc;">
+               <children>
+                  <Label fx:id="time_spent" layoutX="68.0" layoutY="53.0" text="TIME SPENT" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLOCK_ALT" layoutX="14.0" layoutY="88.0" size="50">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </FontAwesomeIconView>
+                  <Label fx:id="hoursSpent" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="106.0" prefHeight="36.0" prefWidth="277.0" text="300" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutY="299.0" opacity="0.8" prefHeight="17.0" prefWidth="1280.0" style="-fx-background-color: #005696;" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

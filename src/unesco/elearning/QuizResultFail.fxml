@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.QuizResultFailController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="732.0" prefWidth="1280.0">
+         <children>
+            <AnchorPane prefHeight="68.0" prefWidth="1280.0" style="-fx-background-color: #434A54;">
+               <children>
+                  <Label fx:id="lesson_name" layoutX="29.0" layoutY="16.0" prefHeight="47.0" prefWidth="713.0" text="QUIZ RESULT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CUBES" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <FontAwesomeIconView fx:id="bck" fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="1153.0" layoutY="57.0" onMouseClicked="#back" size="50">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="68.0" prefHeight="217.0" prefWidth="289.0" style="-fx-background-color: #7faacc;">
+               <children>
+                  <Line endX="50.0" layoutX="7.0" layoutY="102.0" startX="-5.0" stroke="WHITE" strokeWidth="5.0" />
+                  <Line endX="50.0" layoutX="186.0" layoutY="102.0" startX="100.0" stroke="WHITE" strokeWidth="5.0" />
+                  <Label fx:id="student_name" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="165.0" prefHeight="31.0" prefWidth="289.0" text="Student Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="student_image" fitHeight="160.0" fitWidth="176.0" layoutX="58.0" layoutY="10.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@image/photo.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="student_status" alignment="CENTER" layoutX="-5.0" layoutY="193.0" prefHeight="25.0" prefWidth="289.0" text="Status" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="218.0" fitWidth="991.0" layoutX="289.0" layoutY="68.0" pickOnBounds="true">
+               <image>
+                  <Image url="@image/header.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="9.0" layoutY="716.0" prefHeight="11.0" prefWidth="1263.0" style="-fx-background-color: #888;" />
+            <AnchorPane layoutX="44.0" layoutY="298.0" prefHeight="414.0" prefWidth="1193.0" style="-fx-background-color: #fff;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <children>
+                  <FontAwesomeIconView fill="RED" glyphName="CLOSE" layoutX="236.0" layoutY="80.0" size="100" />
+                  <Label layoutX="341.0" layoutY="12.0" prefHeight="51.0" prefWidth="701.0" text="Sorry. You failed the quiz!">
+                     <font>
+                        <Font name="System Bold" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="467.0" layoutY="54.0" prefHeight="51.0" prefWidth="208.0" text="Your Quiz Score: ">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="m_score" layoutX="675.0" layoutY="62.0" text="80%">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="482.0" layoutY="98.0" prefHeight="51.0" prefWidth="179.0" text="Passing Score: ">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pscore" layoutX="661.0" layoutY="106.0" text="100%">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXButton buttonType="RAISED" layoutX="991.0" layoutY="351.0" onAction="#doneH" opacity="0.82" prefHeight="58.0" prefWidth="193.0" style="-fx-background-color: #005696;" text="DONE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <ScrollPane layoutX="9.0" layoutY="141.0">
+                     <content>
+                        <VBox fx:id="hPane" prefHeight="202.0" prefWidth="1173.0" spacing="5.0">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

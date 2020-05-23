@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.CourseListController">
+   <content>
+      <AnchorPane id="AnchorPane">
+         <children>
+            <AnchorPane prefHeight="75.0" prefWidth="1270.0" style="-fx-background-color: #434A54;">
+               <children>
+                  <Label fx:id="lesson_name" layoutX="29.0" layoutY="11.0" prefHeight="47.0" prefWidth="713.0" text="Lesson Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <FontAwesomeIconView fx:id="bck" fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="1188.0" layoutY="57.0" onMouseClicked="#back" size="50">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="75.0" prefHeight="251.0" prefWidth="289.0" style="-fx-background-color: #7faacc;">
+               <children>
+                  <Line endX="50.0" layoutX="7.0" layoutY="102.0" startX="-5.0" stroke="WHITE" strokeWidth="5.0" />
+                  <Line endX="50.0" layoutX="186.0" layoutY="102.0" startX="100.0" stroke="WHITE" strokeWidth="5.0" />
+                  <Label fx:id="student_name" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="170.0" prefHeight="31.0" prefWidth="289.0" text="Student Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="student_image" fitHeight="160.0" fitWidth="176.0" layoutX="58.0" layoutY="10.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@image/photo.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="student_status" alignment="CENTER" layoutX="-5.0" layoutY="201.0" prefHeight="25.0" prefWidth="289.0" text="Status" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="251.0" fitWidth="981.0" layoutX="289.0" layoutY="75.0" pickOnBounds="true">
+               <image>
+                  <Image url="@image/header.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="term" layoutX="13.0" layoutY="337.0" prefHeight="36.0" prefWidth="306.0" text="1st Term">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="TELEVISION" size="30" />
+               </graphic>
+            </Label>
+            <AnchorPane layoutX="23.0" layoutY="388.0" prefHeight="341.0" prefWidth="1229.0">
+               <children>
+                  <JFXListView fx:id="listItem" layoutX="4.0" onMouseClicked="#showVideo" prefHeight="366.0" prefWidth="1258.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="0.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </JFXListView>
+                  <AnchorPane layoutX="-15.0" layoutY="330.0" opacity="0.82" prefHeight="15.0" prefWidth="1248.0" style="-fx-background-color: #005696;" />
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="play" buttonType="RAISED" disable="true" layoutX="297.0" layoutY="334.0" onAction="#play" opacity="0.82" prefHeight="45.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #75a24d;" text="PLAY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLAY" size="30" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="pin" buttonType="RAISED" disable="true" layoutX="471.0" layoutY="334.0" onAction="#pin" opacity="0.82" prefHeight="45.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #005696;" text="PIN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MAP_PIN" size="30" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.MainPageController">
+   <content>
+      <AnchorPane id="AnchorPane" opacity="0.95" prefHeight="568.0" prefWidth="1018.0" style="-fx-background-color: #005696;">
+         <children>
+            <JFXButton fx:id="nonformal" buttonType="RAISED" contentDisplay="TOP" layoutX="49.0" layoutY="69.0" onAction="#login" prefHeight="202.0" prefWidth="921.0" style="-fx-background-color: #75A24D;" text="NON FORMAL - HAUSA" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="55.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TV" size="70">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </FontAwesomeIconView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="formal" buttonType="RAISED" contentDisplay="TOP" layoutX="49.0" layoutY="326.0" onAction="#login2" prefHeight="202.0" prefWidth="921.0" style="-fx-background-color: #077655;" text="FORMAL - JSS 2" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="70">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </FontAwesomeIconView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="55.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.SyncDataController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1280.0">
+         <children>
+            <AnchorPane prefHeight="57.0" prefWidth="1280.0" style="-fx-background-color: #434A54;">
+               <children>
+                  <Label fx:id="lesson_name" layoutX="33.0" layoutY="11.0" prefHeight="47.0" prefWidth="713.0" text="SYNC DATA" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOUD_UPLOAD" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <FontAwesomeIconView fx:id="bck" fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="1176.0" layoutY="51.0" onMouseClicked="#back" size="50">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="62.0" prefHeight="214.0" prefWidth="289.0" style="-fx-background-color: #7faacc;">
+               <children>
+                  <Line endX="50.0" layoutX="7.0" layoutY="102.0" startX="-5.0" stroke="WHITE" strokeWidth="5.0" />
+                  <Line endX="50.0" layoutX="186.0" layoutY="102.0" startX="100.0" stroke="WHITE" strokeWidth="5.0" />
+                  <Label fx:id="student_name" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="163.0" prefHeight="31.0" prefWidth="289.0" text="Student Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="student_image" fitHeight="160.0" fitWidth="176.0" layoutX="58.0" layoutY="5.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@image/photo.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="student_status" alignment="CENTER" layoutX="-5.0" layoutY="186.0" prefHeight="25.0" prefWidth="289.0" text="Status" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="214.0" fitWidth="991.0" layoutX="289.0" layoutY="62.0" pickOnBounds="true">
+               <image>
+                  <Image url="@image/header.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="14.0" layoutY="283.0" prefHeight="406.0" prefWidth="530.0" style="-fx-background-color: #fff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label prefHeight="45.0" prefWidth="530.0" style="-fx-background-color: #000;" text=" SYNC SERVER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SERVER" size="30.0" translateX="10.0" />
+                     </graphic>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <JFXButton fx:id="serverButton" buttonType="RAISED" layoutY="45.0" onAction="#startServer" prefHeight="54.0" prefWidth="530.0" style="-fx-background-color: red;" text="START SERVER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLAY" size="30" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextArea fx:id="serverText" editable="false" layoutY="103.0" prefHeight="320.0" prefWidth="530.0" promptText="Server Status.... Not Running..." wrapText="true" />
+                  <JFXButton fx:id="uploadButton" buttonType="RAISED" layoutY="353.0" onAction="#uploadData" prefHeight="54.0" prefWidth="530.0" style="-fx-background-color: #005696;" text="UPLOAD SYNC DATA" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLAY" size="30" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="625.0" layoutY="283.0" prefHeight="423.0" prefWidth="641.0" style="-fx-background-color: #fff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label fx:id="results" prefHeight="45.0" prefWidth="641.0" style="-fx-background-color: #000;" text=" SYNC DATA..LOGS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOUD_UPLOAD" size="30" translateX="5.0" />
+                     </graphic>
+                  </Label>
+                  <JFXButton fx:id="start_button" buttonType="RAISED" layoutX="4.0" layoutY="46.0" onAction="#startSync" prefHeight="54.0" prefWidth="634.0" style="-fx-background-color: green;" text="START SYNCHRONIZATION" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLAY" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXTextArea fx:id="text" editable="false" layoutX="5.0" layoutY="119.0" prefHeight="291.0" prefWidth="624.0" promptText="Synchronization Logs here..." wrapText="true" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="3.0" layoutY="715.0" opacity="0.8" prefHeight="15.0" prefWidth="1269.0" style="-fx-background-color: #005696;" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

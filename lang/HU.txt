@@ -1,0 +1,114 @@
+username # Sunan Sirri
+password # Kalmar Sirri
+l_note # Ayi sabon rajista
+login_register_Button # Sabon wuri
+lgin # Shiga
+forgot_pword # Forgot Password
+
+##New Profile Reg..
+
+newprofiletitle # Sabon Wuri
+firstname # Sunanka
+lastname # Sunan Mahaifinka
+dob # Shekarun Haihuwa
+sex # Jima'i
+atype # Nau'in Asusun
+student_type # Nau'in Yaro
+register # Rajista
+cancel # Soke
+browse # Duba Hoto
+
+
+##Dialog Boxes..
+
+invalid_login # Kuskuren bayanin shiga
+dberror # Kuskure
+info # Sako
+exit_application # Shin kuna tabbatar kuna so ku fita?
+db_selectLanguage # Zabi harshen da aka rigaya
+database_err # kuskure, tuntuɓar admin
+user_exist # Bayanan mai amfani riga ya kasance
+fill_in_blank # Cika cikin fannonin da ba a cika ba
+user_created # An kirkiri sabon bayanin da aka gina
+user_updated # Bayanin Mai Amfani
+
+##EDIT USER PROFILE..
+
+editprofiletitle # Shirya Mai amfani
+update # Sabuntawa
+
+##Dashboard..
+
+dashboard # Shafin gida
+courses # Batu
+quizes # Tambaya
+achieve # Sakamakon
+setting # Saituna
+logout # Sanarwa
+syncData # Hada tare
+logs # Rikodin
+library # Wurin Littatafai
+
+timeSpent # Yawan Lokaci
+quizPassed # Tambayoyi da aka ci
+
+Date # Kwanan wata
+courQ # Batu
+Term # Mataki
+Lesson # Darasi
+accessDenied # An hana shiga
+
+TIME # Lokaci
+
+##NonFormalCoursesList
+
+LssonTitle # Sunan Darasi
+play # Kunna
+save # Ajiye
+dataError # kuskure samun bayanai
+
+##NonFormalCourseOptions
+
+ReadAndWrite # Karatu
+Numbers # Lamba
+Skills # Kwarewa
+
+
+Stopesson # Dakatar da Darasi
+
+##More..
+
+AreYouSure # Ka tabbata?
+endSession # Karshen Zaman
+
+quizCompleted # Kammala Tambaya
+
+SCORE # Alama
+STATUS # Jihar
+
+ATTEMPTS # Yunkurin
+
+INCOMPLETE # Ba a cika ba
+FAILS # Kasawa
+SUCCESS # Nasara
+COMPLETED # Darussa sun gama
+
+BEGIN # FARA
+RSLTS # Sakamako
+
+TTLE # Sunan
+TIYP # Iri/Ire Ire
+DESC # Bayanin
+PREVIEW # Duba
+
+HISTORY # Tarihin
+STYPEERROR # Kuskuren Dalibi
+
+GOINNOW # SHIGA
+
+
+
+
+
+
+

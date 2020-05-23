@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="464.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="unesco.elearning.SelectStudentTypeController">
+   <children>
+      <AnchorPane prefHeight="84.0" prefWidth="464.0" style="-fx-background-color: #005696;">
+         <children>
+            <Label layoutX="21.0" layoutY="24.0" text="COURSE OPTION" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BANK" size="40" />
+               </graphic>
+            </Label>
+            <FontAwesomeIconView fill="RED" glyphName="CLOSE" layoutX="426.0" layoutY="34.0" onMouseClicked="#close" size="40">
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <JFXButton fx:id="fbutton" buttonType="RAISED" layoutX="16.0" layoutY="98.0" onAction="#goToFormal" onMouseEntered="#rollin" onMouseExited="#rollout" prefHeight="84.0" prefWidth="431.0" style="-fx-background-color: #FF5363;" text="FORMAL (JSS 2)" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="nfbutton" buttonType="RAISED" layoutX="16.0" layoutY="203.0" onAction="#goToFormal2" onMouseEntered="#rollin1" onMouseExited="#rollout1" prefHeight="84.0" prefWidth="431.0" style="-fx-background-color: #FD6D4B;" text="NON FORMAL (HAUSA)" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.FindStudentsController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="715.0" prefWidth="1256.0">
+         <children>
+            <AnchorPane prefWidth="1256.0" style="-fx-background-color: #434A54;">
+               <children>
+                  <Label fx:id="lesson_name" layoutX="29.0" layoutY="10.0" prefHeight="47.0" prefWidth="713.0" text="FIND STUDENT..." textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <FontAwesomeIconView fx:id="bck" fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="1157.0" layoutY="51.0" onMouseClicked="#back" size="50">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="68.0" prefHeight="113.0" prefWidth="1256.0" style="-fx-background-color: #005696;">
+               <children>
+                  <JFXTextField fx:id="tname" focusColor="WHITE" labelFloat="true" layoutX="98.0" layoutY="42.0" prefHeight="38.0" prefWidth="513.0" promptText="ENTER STUDENT NAME OR STUDENT ID" unFocusColor="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton buttonType="RAISED" layoutX="714.0" layoutY="46.0" onAction="#search" opacity="0.82" prefHeight="44.0" prefWidth="191.0" style="-fx-background-color: #fff;" text="FIND STUDENT">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="8.0" layoutY="197.0" prefHeight="499.0" prefWidth="967.0" style="-fx-background-color: #000;">
+               <children>
+                  <TableView fx:id="studentTable" onMouseClicked="#getID" prefHeight="650.0" prefWidth="986.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="name" prefWidth="444.0" text="NAME" />
+                      <TableColumn fx:id="id" minWidth="0.0" prefWidth="155.0" text="STUDENT ID" />
+                        <TableColumn fx:id="dob" prefWidth="133.0" text="DOB" />
+                        <TableColumn fx:id="sex" prefWidth="94.0" text="SEX" />
+                        <TableColumn fx:id="type" prefWidth="159.0" text="TYPE" />
+                    </columns>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1003.0" layoutY="299.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #fff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <ImageView fx:id="student_image" fitHeight="200.0" fitWidth="233.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <JFXButton buttonType="RAISED" layoutX="1001.0" layoutY="519.0" onAction="#goToAchievements" opacity="0.82" prefHeight="51.0" prefWidth="239.0" style="-fx-background-color: #005696;" text="GO TO ACHIEVEMENTS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HAND_ALT_RIGHT" size="30" />
+               </graphic>
+            </JFXButton>
+            <AnchorPane layoutX="8.0" layoutY="704.0" prefHeight="9.0" prefWidth="1240.0" style="-fx-background-color: #005696;" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="499.0" prefWidth="527.0" style="-fx-background-color: #ccc;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.PinLessonController">
+   <children>
+      <Label layoutX="21.0" layoutY="14.0" prefHeight="45.0" prefWidth="452.0" text="PINNED LESSONS" textFill="#005696">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="14.0" layoutY="72.0" prefHeight="373.0" prefWidth="508.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="166.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXRadioButton fx:id="lesson_1" onAction="#less1" prefHeight="51.0" prefWidth="514.0" text="LESSON 1" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="lesson_group" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="lesson_2" onAction="#less2" prefHeight="51.0" prefWidth="513.0" text="LESSON 2" toggleGroup="$lesson_group" wrapText="true" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="lesson_3" onAction="#less3" prefHeight="51.0" prefWidth="512.0" text="LESSON 3" toggleGroup="$lesson_group" wrapText="true" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="lesson_4" onAction="#less4" prefHeight="51.0" prefWidth="523.0" text="LESSON 4" toggleGroup="$lesson_group" wrapText="true" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="lesson_5" onAction="#less5" prefHeight="51.0" prefWidth="596.0" text="LESSON 5" toggleGroup="$lesson_group" wrapText="true" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="lesson_6" onAction="#less6" prefHeight="51.0" prefWidth="653.0" text="LESSON 6" toggleGroup="$lesson_group" wrapText="true" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXRadioButton>
+            <Separator opacity="0.68" prefWidth="200.0" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Line endX="411.0" layoutX="115.0" layoutY="62.0" startX="-120.0" stroke="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="398.0" layoutY="445.0" onAction="#cancel" opacity="0.82" prefHeight="45.0" prefWidth="106.0" style="-fx-background-color: #005696;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="268.0" layoutY="445.0" onAction="#save" opacity="0.82" prefHeight="45.0" prefWidth="106.0" style="-fx-background-color: #005696;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

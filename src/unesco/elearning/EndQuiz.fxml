@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="204.0" prefWidth="395.0" style="-fx-background-color: #999;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.EndQuizController">
+   <children>
+      <HBox alignment="CENTER" layoutX="27.0" prefHeight="230.0" prefWidth="405.0" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="20.0" />
+         </padding>
+         <children>
+            <JFXButton contentDisplay="TOP" onAction="#retake" prefHeight="150.0" prefWidth="168.0" style="-fx-background-color: #005636;" text="Retake Quiz" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="30" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="TOP" layoutX="283.0" layoutY="50.0" onAction="#dash" prefHeight="150.0" prefWidth="168.0" style="-fx-background-color: #005696;" text="HomePage" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="30" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" prefHeight="43.0" prefWidth="405.0" text="You should go back to the lesson before retaking the quiz" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

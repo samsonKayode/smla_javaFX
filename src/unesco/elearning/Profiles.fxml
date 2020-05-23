@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.ProfilesController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="648.0" prefWidth="1256.0">
+         <children>
+            <AnchorPane prefWidth="1256.0" style="-fx-background-color: #434A54;">
+               <children>
+                  <Label fx:id="lesson_name" layoutX="29.0" layoutY="10.0" prefHeight="47.0" prefWidth="713.0" text="AVAILABLE PROFILES" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <FontAwesomeIconView fx:id="bck" fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="1157.0" layoutY="51.0" onMouseClicked="#back" size="50">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="108.0" prefHeight="499.0" prefWidth="967.0" style="-fx-background-color: #000;">
+               <children>
+                  <TableView fx:id="studentTable" onMouseClicked="#getID" prefHeight="499.0" prefWidth="926.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="name" prefWidth="381.0000305175781" text="NAME" />
+                        <TableColumn fx:id="id" minWidth="0.0" prefWidth="175.0" text="STUDENT ID" />
+                        <TableColumn fx:id="username" prefWidth="159.0" text="USERNAME" />
+                        <TableColumn fx:id="password" prefWidth="120.0" text="PASSWORD" />
+                        <TableColumn fx:id="type" prefWidth="151.0" text="TYPE" />
+                     </columns>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1000.0" layoutY="197.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #fff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <ImageView fx:id="student_image" fitHeight="200.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <JFXButton buttonType="RAISED" layoutX="998.0" layoutY="430.0" onAction="#removeProfile" opacity="0.82" prefHeight="51.0" prefWidth="239.0" style="-fx-background-color: #005696;" text="REMOVE PROFILE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="RED" glyphName="REMOVE" size="30" />
+               </graphic>
+            </JFXButton>
+            <AnchorPane layoutX="8.0" layoutY="75.0" prefHeight="9.0" prefWidth="1240.0" style="-fx-background-color: #005696;" />
+            <AnchorPane layoutX="8.0" layoutY="628.0" prefHeight="9.0" prefWidth="1240.0" style="-fx-background-color: #005696;" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

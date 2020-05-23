@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="741.0" prefWidth="1283.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unesco.elearning.FormalDashBoardController">
+   <content>
+      <AnchorPane id="AnchorPane" fx:id="dashboardPane">
+         <children>
+            <AnchorPane prefHeight="40.0" prefWidth="1281.0" style="-fx-background-color: #434A54;">
+               <children>
+                  <FontAwesomeIconView fx:id="exit_app" fill="WHITE" glyphName="CLOSE" layoutX="1172.0" layoutY="46.0" onMouseClicked="#closeApp" size="50">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fx:id="profile_button" fill="#75a24d" glyphName="USERS" layoutX="1062.0" layoutY="41.0" onMouseClicked="#profilePage" size="40">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="-2.0" prefHeight="741.0" prefWidth="994.0" style="-fx-background-color: #434a54;">
+               <children>
+                  <AnchorPane layoutY="52.0" prefHeight="207.0" prefWidth="291.0" style="-fx-background-color: #7faacc;">
+                     <children>
+                        <FontAwesomeIconView fx:id="edit_profileB" fill="#fcf9f9" glyphName="EDIT" layoutX="243.0" layoutY="40.0" onMouseClicked="#editProfile" opacity="0.82" size="30">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontAwesomeIconView>
+                        <Line endX="50.0" layoutX="7.0" layoutY="92.0" startX="-5.0" stroke="WHITE" strokeWidth="5.0" />
+                        <Line endX="50.0" layoutX="186.0" layoutY="92.0" startX="100.0" stroke="WHITE" strokeWidth="5.0" />
+                        <Label fx:id="student_name" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="156.0" prefHeight="31.0" prefWidth="289.0" text="Student Name" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="student_image" fitHeight="160.0" fitWidth="176.0" layoutX="58.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@image/photo.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="student_status" alignment="CENTER" layoutX="1.0" layoutY="181.0" prefHeight="25.0" prefWidth="289.0" text="Status" textFill="WHITE">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <GridPane layoutX="6.0" layoutY="258.0" prefHeight="469.0" prefWidth="278.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Hyperlink fx:id="dashboard" opacity="0.8" prefHeight="48.0" prefWidth="302.0" text="Dashboard" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD" size="30" />
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Hyperlink>
+                        <Hyperlink fx:id="courses" onAction="#goToCourses" prefHeight="48.0" prefWidth="292.0" text="Courses" textFill="WHITE" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BRIEFCASE" size="30" />
+                           </graphic>
+                        </Hyperlink>
+                        <Hyperlink fx:id="quizes" onAction="#gotoQuiz" prefHeight="48.0" prefWidth="282.0" text="Quizes" textFill="WHITE" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CUBES" size="30" />
+                           </graphic>
+                        </Hyperlink>
+                        <Hyperlink fx:id="achievements" onAction="#goToAchievements" prefHeight="48.0" prefWidth="286.0" text="Achievements" textFill="WHITE" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="TROPHY" size="30" />
+                           </graphic>
+                        </Hyperlink>
+                        <Hyperlink fx:id="settings" onAction="#showSettings" prefHeight="48.0" prefWidth="286.0" text="Settings" textFill="WHITE" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="COGS" size="30" />
+                           </graphic>
+                        </Hyperlink>
+                        <Hyperlink fx:id="logout" onAction="#logout" text="Logout" textFill="WHITE" GridPane.rowIndex="8">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="30" />
+                           </graphic>
+                        </Hyperlink>
+                        <Hyperlink fx:id="ulogs" onAction="#userLogs" prefHeight="48.0" prefWidth="282.0" text="User Logs" textFill="WHITE" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PENCIL_SQUARE_ALT" size="30" />
+                           </graphic>
+                        </Hyperlink>
+                        <Hyperlink fx:id="sync" onAction="#goSync" prefHeight="48.0" prefWidth="286.0" text="Sync Data" textFill="WHITE" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="GREEN" glyphName="CLOUD_UPLOAD" size="30" />
+                           </graphic>
+                        </Hyperlink>
+                        <Hyperlink fx:id="library" onAction="#goToLibrary" prefHeight="48.0" prefWidth="286.0" text="Library" textFill="WHITE" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BANK" size="30" />
+                           </graphic>
+                        </Hyperlink>
+                     </children>
+                  </GridPane>
+                  <Label layoutX="14.0" layoutY="1.0" opacity="0.82" prefHeight="51.0" prefWidth="807.0" text="SCHOOL MEET THE LEARNER'S APPROACH" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="40" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="281.0" layoutY="659.0" prefHeight="80.0" prefWidth="1000.0" style="-fx-background-color: #434A54;">
+               <children>
+                  <JFXButton fx:id="lesson_1" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="20.0" layoutY="8.0" onAction="#lesson1" onMouseEntered="#rollin1" onMouseExited="#rollout1" prefHeight="66.0" prefWidth="136.0" style="-fx-background-color: #7faacc;" text="LESSON 1" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" nodeOrientation="LEFT_TO_RIGHT" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="lesson_2" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="181.0" layoutY="8.0" onAction="#lesson2" onMouseEntered="#rollin2" onMouseExited="#rollout2" prefHeight="66.0" prefWidth="136.0" style="-fx-background-color: #1F5B7F;" text="LESSON 2" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" nodeOrientation="LEFT_TO_RIGHT" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="lesson_3" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="338.0" layoutY="8.0" onAction="#lesson3" onMouseEntered="#rollin3" onMouseExited="#rollout3" prefHeight="66.0" prefWidth="136.0" style="-fx-background-color: #75A24D;" text="LESSON 3" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" nodeOrientation="LEFT_TO_RIGHT" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="lesson_4" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="502.0" layoutY="8.0" onAction="#lesson4" onMouseEntered="#rollin4" onMouseExited="#rollout4" prefHeight="66.0" prefWidth="136.0" style="-fx-background-color: #077655;" text="LESSON 4" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" nodeOrientation="LEFT_TO_RIGHT" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="lesson_5" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="669.0" layoutY="8.0" onAction="#lesson5" onMouseEntered="#rollin5" onMouseExited="#rollout5" prefHeight="66.0" prefWidth="136.0" style="-fx-background-color: #FF5363;" text="LESSON 5" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" nodeOrientation="LEFT_TO_RIGHT" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="lesson_6" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="838.0" layoutY="8.0" onAction="#lesson6" onMouseEntered="#rollin6" onMouseExited="#rollout6" prefHeight="66.0" prefWidth="136.0" style="-fx-background-color: #FD6D4B;" text="LESSON 6" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" nodeOrientation="LEFT_TO_RIGHT" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="287.0" layoutY="66.0" prefHeight="207.0" prefWidth="994.0" style="-fx-background-color: #005696;">
+               <children>
+                  <ImageView fitHeight="206.0" fitWidth="993.0" layoutY="-13.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@image/header.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="view_pane" layoutX="281.0" layoutY="258.0" prefHeight="401.0" prefWidth="999.0" style="-fx-background-color: #ccc;">
+               <children>
+                  <AnchorPane layoutX="33.0" layoutY="11.0" prefHeight="129.0" prefWidth="324.0" style="-fx-background-color: #75a24d;">
+                     <children>
+                        <Label fx:id="tsp" alignment="CENTER" contentDisplay="TOP" prefHeight="63.0" prefWidth="320.0" text="TIME SPENT" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CLOCK_ALT" size="40" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="hoursSpent" alignment="CENTER" layoutX="-1.0" layoutY="79.0" prefHeight="55.0" prefWidth="324.0" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="38.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="615.0" layoutY="11.0" prefHeight="129.0" prefWidth="324.0" style="-fx-background-color: #75a24d;">
+                     <children>
+                        <Label fx:id="tqp" alignment="CENTER" contentDisplay="TOP" layoutX="2.0" prefHeight="72.0" prefWidth="320.0" text="TOTAL QUIZ PASSED" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CUBES" size="40" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="quizPassed" alignment="CENTER" layoutX="-1.0" layoutY="73.0" prefHeight="55.0" prefWidth="324.0" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="38.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <TableView fx:id="coursetableView" layoutX="17.0" layoutY="185.0" prefHeight="213.0" prefWidth="963.0" tableMenuButtonVisible="true">
+                    <columns>
+                      <TableColumn fx:id="cDate" prefWidth="147.0" text="DATE" />
+                        <TableColumn fx:id="cCourse" prefWidth="193.0" text="COURSE" />
+                        <TableColumn fx:id="cTerm" prefWidth="126.0" text="TERM" />
+                        <TableColumn fx:id="cLesson" prefWidth="365.0" text="LESSON" />
+                        <TableColumn fx:id="cTimeSpent" prefWidth="120.0" text="MINS SPENT" />
+                    </columns>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="149.0" prefHeight="30.0" prefWidth="963.0" text="Most Recent Lessons.." textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HISTORY" size="20.0" />
+                     </graphic>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
